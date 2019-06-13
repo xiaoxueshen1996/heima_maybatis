@@ -6,7 +6,7 @@
 <configuration>
     <environments default="mysql">
         <environment id="mysql">
-            <transactionManager type="jdbc"></transactionManager>
+            <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://localhost:3306/snackshop"/>
@@ -17,6 +17,7 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/dao/IUserDao.xml"/>
+        <mapper class="com.dao.IUserDao"/>
+
     </mappers>
 </configuration>

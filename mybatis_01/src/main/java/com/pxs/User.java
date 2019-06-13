@@ -1,13 +1,24 @@
 package com.pxs;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class User implements Serializable {
     private Integer id;
+    private Date createtime;
     private String username;
     private String password;
     private String mail;
     private String address;
+
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
 
     public Integer getId() {
         return id;
@@ -53,6 +64,7 @@ public class User implements Serializable {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", createtime='" + createtime + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", mail='" + mail + '\'' +
